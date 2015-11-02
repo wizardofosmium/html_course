@@ -11,9 +11,16 @@ img.logo {
   right: 0;
 }
 
-p {
+p.abstract {
   background: #f6f1d8;
   padding: 1em;
+  margin: 2em;
+  font-size: small;
+}
+
+p.abstract:before {
+  content: "Abstract: ";
+  font-weight: bold;
 }
 
 a {
