@@ -18,3 +18,15 @@ a {
   font-family: sans-serif;
   font-weight: bold;
 }
+
+a:hover {
+  background: #f6e89d;
+  color: black;
+  border: 1px solid black;
+}
+
+body {
+  background: url(background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
