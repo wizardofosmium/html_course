@@ -2,7 +2,7 @@ h1 {
   background: #f6e89d;
 }
 
-img {
+img.logo {
   /*
   float: right;
   */
@@ -29,6 +29,16 @@ a:hover {
   background: #f6e89d;
   color: black;
   border: 1px solid black;
+}
+
+a img.small-cat {
+  display: none;
+}
+
+a:hover img.small-cat {
+  display: inline;
+  position: absolute;
+  transform: translate(-16px,-32px);
 }
 
 body {
