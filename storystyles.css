@@ -74,6 +74,16 @@ nav a:hover {
   box-shadow: 3px 3px 3px 3px #ffffff;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table tr th {
+  background: #dddddd;
+}
+
 table tr td {
-  border: 1px solid gray;
+  border: 1px solid #dddddd;
+  padding: 0.5em;
+  font-size: small;
 }
