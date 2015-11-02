@@ -73,3 +73,7 @@ nav a.current {
 nav a:hover {
   box-shadow: 3px 3px 3px 3px #ffffff;
 }
+
+table tr td {
+  border: 1px solid gray;
+}
