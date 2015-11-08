@@ -46,51 +46,249 @@
       </tr>
       <tr>
         <td>padding</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>A length, a percentage</td>
+        <td>Space between content and border</td>
+        <td>padding: 12px;</td>
+        <td><span style="border: 2px dashed red; padding: 12px;">padding</span></td>
       </tr>
       <tr>
         <td>margin</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>A length, a percentage</td>
+        <td>Space between border and outside</td>
+        <td>margin: 12px;</td>
+        <td><span style="border: 2px dashed red; margin: 12px;">margin</span></td>
       </tr>
       <tr>
         <td>display</td>
+        <td>type</td>
+        <td>How node should be displayed</td>
+        <td>display: none;</td>
+        <td><span style="border: 2px dashed red; display: none;">display</span></td>
+      </tr>
+      <tr>
+        <td>vertical-align</td>
+        <td>type</td>
+        <td>How to align text in the box</td>
+        <td>vertical-align: top;</td>
+        <td>vertical-align <img src="small_cat.png" style="vertical-align: top;"></td>
+      </tr>
+      <tr>
+        <td>text-align</td>
+        <td>type</td>
+        <td>How to align text in the box</td>
+        <td>text-align: center;</td>
+        <td style="text-align: center;">text-align</td>
+      </tr>
+      <tr>
+        <td>text-indent</td>
+        <td>A length, a percentage</td>
+        <td>How much to indent the first line of text.</td>
+        <td>text-indent: 3em;</td>
+        <td style="text-indent: 3em; width: 25%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa turpis,
+          semper quis fringilla ut, viverra nec risus. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.</td>
+      </tr>
+      <tr>
+        <td>text-decoration</td>
+        <td>type</td>
+        <td>How to decorate (e.g. underline) the text.</td>
+        <td>text-decoration: line-through;</td>
+        <td style="text-decoration: line-through; width: 25%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa turpis,
+          semper quis fringilla ut, viverra nec risus. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.</td>
+      </tr>
+      <tr>
+        <td>line-height</td>
+        <td>A length, a percentge</td>
+        <td>The line height of the text (e.g. doubled-spaced)</td>
+        <td>line-height: 3em;</td>
+        <td style="line-height: 3em; width: 25%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa turpis,
+          semper quis fringilla ut, viverra nec risus. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>A length, a percentage</td>
+        <td>The height of the box</td>
+        <td>height: 3cm;</td>
+        <td><div style="height: 3cm; background: #cccccc;">Lorem ipsum</div></td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>A length, a percentage</td>
+        <td>The width of the box</td>
+        <td>width: 3cm;</td>
+        <td><div style="width: 3cm; background: #cccccc;">Lorem ipsum</div></td>
+      </tr>
+      <tr>
+        <td>min-height</td>
+        <td>A length, a percentage</td>
+        <td>The minimum height of the box</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>min-width</td>
+        <td>A length, a percentage</td>
+        <td>The minimum width of the box</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>max-height</td>
+        <td>A length, a percentage</td>
+        <td>The maxium height of the box</td>
+        <td>max-height: 4.1em; max-width: 3cm; overflow: scroll;</td>
+        <td><div style="max-height: 4.1em; max-width: 3cm; overflow: scroll;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa turpis, semper quis fringilla ut, viverra nec risus. </div></td>
+      </tr>
+      <tr>
+        <td>max-width</td>
+        <td>A length, a percentage</td>
+        <td>The maximum width of the box</td>
+        <td>max-width: 1.5cm;</td>
+        <td><div style="max-width: 1.5cm;">Lorem ipsum</div></td>
+      </tr>
+      <tr>
+        <td>font-weight</td>
+        <td>*</td>
+        <td>The text weight</td>
+        <td>font-weight: bold;</td>
+        <td><span style="font-weight: bold;">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+        <td>font-size</td>
+        <td>*</td>
+        <td>The text weight</td>
+        <td>font-size: small;</td>
+        <td><span style="font-size: small;">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+        <td>font-family</td>
+        <td>*</td>
+        <td>The text font family</td>
+        <td>font-family: cursive;</td>
+        <td><span style="font-family: cursive;">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>direction</td>
+        <td>Where to float the node to</td>
+        <td>float: right;</td>
+        <td><span style="float: right;">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+        <td rowspan="3">list-style</td>
+        <td rowspan="3">* image position type</td>
+        <td rowspan="3">list-style-image: url(...);<br>list-style-position: hanging,inside,outside;<br>list-style-type: disc,square,none,upper-alpha,lower-roman;</td>
+        <td>list-style-image: url(tiny_cat.png);</td>
+        <td>
+          <ul style="list-style-image: url(tiny_cat.png);">
+            <li>Alpha</li><li>Beta</li><li>Gamma</li><li>Delta</li><li>Epsilon</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>list-style-position: inside; list-style-type: lower-roman;</td>
+        <td>
+          <ol style="list-style-position: inside; list-style-type: lower-roman;">
+            <li>Alpha</li><li>Beta</li><li>Gamma</li><li>Delta</li><li>Epsilon</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td>list-style-position: outside; list-style-type: upper-alpha;</td>
+        <td>
+          <ol style="list-style-position: outside; list-style-type: upper-alpha;">
+            <li>Alpha</li><li>Beta</li><li>Gamma</li><li>Delta</li><li>Epsilon</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td>background-position</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
+        <td>background-repeat</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
+        <td>visibility</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
+        <td>outline</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
+        <td>white-space</td>
+        <td>type: normal, nowrap, pre, pre-line, pre-wrap</td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
+        <td style="width: 25%;">
+          <div style="white-space: pre; max-width: 25%; width: 25%; overflow: scroll;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa turpis,
+          semper quis fringilla ut, viverra nec risus. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.
+          </div>
+        </td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>word-spacing</td>
+        <td>A length</td>
+        <td>The space between words</td>
+        <td>word-spacing: 2em;</td>
+        <td style="word-spacing: 2em; width: 25%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur massa turpis,
+          semper quis fringilla ut, viverra nec risus. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.</td>
+      </tr>
+      <tr>
+        <td>border-radius</td>
+        <td>A length, a percentage</td>
+        <td>How much to round the corners of the border</td>
+        <td>border-radius: 1em;</td>
+        <td><span style="border-radius: 1em; border: 1px solid black; padding: 0.5em;">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+        <td>box-shadow</td>
+        <td>x y w h color</td>
+        <td>Definition of the box shadow</td>
+        <td>border-radius: 1em;</td>
+        <td><span style="box-shadow: 0.3em 0.1em 0.2em 0.2em gray; border-radius: 1em; border: 1px solid black; padding: 0.5em;">Lorem ipsum</span></td>
+      </tr>
+      <tr>
+        <td rowspan="2">border-collapse</td>
+        <td rowspan="2">collapse, separate</td>
+        <td rowspan="2">Whether cell borders are rectangles or long lines</td>
+        <td>border-collapse: collapse;</td>
+        <td>
+          <table style="border-collapse: collapse;">
+            <tr><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td><td>6</td></tr>
+            <tr><td>7</td><td>8</td><td>9</td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>border-collapse: separate;</td>
+        <td>
+          <table style="border-collapse: separate;">
+            <tr><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td><td>6</td></tr>
+            <tr><td>7</td><td>8</td><td>9</td></tr>
+          </table>
+        </td>
       </tr>
     </table>
   </body>
