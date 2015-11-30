@@ -1,7 +1,23 @@
+/*
+  For every first level heading,
+  make the background pale yellowish.
+    #f6e89d comes from  f6 e8 9d
+      f6 = 246 (means 96% of red)
+      e8 = 232 (means 91% of green)
+      9d = 157 (means 62% of blue)
+*/
 h1 {
   background: #f6e89d;
 }
 
+/*
+  For every image of class logo,
+  position the image so that its top is 0 from the top,
+  and its right is 0 from the right, and it stays fixed
+  in position.
+  
+  Instead of floating to the right.
+*/
 img.logo {
   /*
   float: right;
@@ -11,6 +27,24 @@ img.logo {
   right: 0;
 }
 
+/*
+  Abstract paragraphs, (ie. <p class="abstract">...</p> ),
+  have a yellowish background,
+  small font size (as determined by the browser as to whatever small is,
+  but is smaller than normal text size,
+  have 3 ems (em is the width of the letter 'm' in the current font)
+  spacing around the paragraph:
+  
+    .................
+    .................
+    ..+-----------+..
+    ..|...........|..
+    ..|.PARAGRAPH.|..
+    ..|...........|..
+    ..+-----------+..
+    .................
+    .................
+*/
 p.abstract {
   background: #f6f1d8;
   padding: 1em;
@@ -18,11 +52,28 @@ p.abstract {
   font-size: small;
 }
 
+/*
+  Insert the text 'Abstract: ' in front of the paragraph.
+  This is using the pseudo-selector :before .
+  Make that text bold as well.
+*/
 p.abstract:before {
   content: "Abstract: ";
   font-weight: bold;
 }
 
+/*
+  Every link in the page, is yellowish text on black,
+  with narrow spacing around the link, using the browser's
+  default sans-serif font (whatever that is set to) in bold.
+  
+  Also, to fix the jittery movement when hovering over the links
+  in the nav bar, make every link have a 1 pixel border but
+  when:
+    - not hovered:  transparent
+    - hovered:      black.
+  This has the illusion that the border is added when hovered.
+*/
 a {
   background: black;
   color: #f6e89d;
@@ -32,28 +83,134 @@ a {
   border: 1px solid transparent;
 }
 
+/*
+  When links are hovered, swap the text and background colours.
+  And, set the border colour to be black.
+  
+  :hover is anther pseudo-selector.
+*/
 a:hover {
   background: #f6e89d;
   color: black;
   border: 1px solid black;
 }
 
+/*
+  For the small-cat to only appear when a link is hovered,
+  we have to specify that the small-cat image is not normally
+  displayed.
+  
+  The display attribute stipulates how the element is displayed.
+  Setting this to none means it is not even in the page (not even hidden); totally not there.
+  Other common values are: block, inline, inline-block.
+    block:        makes the element full width in its container
+    inline:       makes the element like a word
+    inline-block: makes the element a bit like both (up to the browser; experiment)
+  
+  The selector matches:
+    <a ...>... <img ... class="small-cat"> ...</a>
+*/
 a img.small-cat {
   display: none;
 }
 
+/*
+  Now, when the small-cat image is in a link that is being hovered,
+  now display it.
+  The position attribute determines where and how the element is placed
+  in the page.  Possible values are:
+    - static (default): just flow like normal
+    - relative: like static except you can "push" the element around
+    - absolute: 
+    - fixed
+  
+  Does nothing:
+    position: static
+    top: -10px
+    left: 20px
+  
+  Pushes the element up 10 pixels and to the right 20 pixels (from where it is):
+    position: relative
+    top: -10px
+    left: 20px
+  
+  Takes the element out of the flow and positions the element to 10 pixels
+  from the top and 20 pixels from the left of the element's (block) container, which
+  is the page if it is not in another element (follows scrolling):
+    position: absolute
+    top:  10px
+    left: 20px
+  
+  Takes the element out of the flow and locks the element to the position 10 pixels
+  from the top and 20 pixels from the left of the window (ignores scrolling):
+    position: fixed
+    top: 10px
+    left: 20px
+  
+  I chose absolute because I wanted to take it out of the flow so it looked like
+  it was above everything else and I wanted it to scroll with the page.
+  I used the transform to make the movement relative to where it is (ie. I wanted
+  to push it around) like position: relative but position: absolute means it floats
+  above and doesn't take up space like it would if it was relative.
+  Translate is the mathematical word for move or shift.
+  
+  If I used:
+    position: relative;
+    top: -16px;
+    left: -32px;
+  then all the links would jump around when the image appears (try it).
+*/
 a:hover img.small-cat {
   display: inline;
   position: absolute;
   transform: translate(-16px,-32px);
 }
 
+/*
+  I want the background of the whole page to be an image.  To set it to a colour,
+  you would do:
+    background: #ff0000;
+  or
+    background: red;
+  To specify the image, you must use url(...).
+  
+  To specify the image in the same folder:
+    url(background.png)
+  or
+    url(./background.png)
+  
+  To specify the image in the parent folder:
+    url(../background.png)
+  
+  To specify the image in a subfolder called images:
+    url(images/background.png)
+  
+  To specify the image in an absolute location:
+    url(https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+  
+  
+  If a page is large and the image is small (say 100x100 pixels), where does the image go and
+  what happens where the image isn't?
+  The default is for the image to be tiled (ie. repeated like bathroom tiles).  This can be good
+  and bad.  To control repeating, use background-repeat:
+    - background-repeat: no-repeat;   Do not repeat; just one instance
+    - background-repeat: repeat;      Repeat in two directions; horizontally and vertically
+    - background-repeat: repeat-x;    Repeat only horizontally
+    - background-repeat: repeat-y;    Repeat only vertically
+  
+  To position the image in the centre of the page (not the window, the page):
+    background-position: center; 
+*/
 body {
   background: url(background.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/*
+  Every navigation block should have a border, 1em padding, rounded corners,
+  and a purplish background.
+*/
 nav {
   border: 1px solid purple;
   padding: 1em;
@@ -61,27 +218,69 @@ nav {
   background: #80d7dc;
 }
 
+/*
+  Every link in every navigation block, should have rounded corners (smaller
+  than the navigation's corners).
+  
+  Also, make the links not look like links, by removing the underline.
+*/
 nav a {
   border-radius: 0.5em;
   text-decoration: none;
 }
 
+/*
+  Any link marked as current (meaning: this link goes to the page you are on):
+    <a ... class="current">...</a>
+  have a red "glow" around the link.
+  
+  box-shadow: xshift yshift extrawidth extraheight colour;
+*/
 nav a.current {
   box-shadow: 0px 0px 8px 8px red;
 }
 
+/*
+  When a link is hovered in a navigation block, change the shadow
+  to a white shadow.
+*/
 nav a:hover {
   box-shadow: 3px 3px 3px 3px #ffffff;
 }
 
+/*
+  I want all tables to have lines between the rows and columns,
+  not a border around each cell.
+    border-collapse: separate;    (default) border around each cell
+    border-collapse: collapse;    lines between rows and columns
+*/
 table {
   border-collapse: collapse;
 }
 
+/*
+  Make the background of header cells gray.
+  
+  Header cells can appear anywhere in a table, but people usually
+  place them at the top of each column:
+  
+    th th th th th th
+    td td td td td td
+    td td td td td td
+    td td td td td td
+    td td td td td td
+  
+  Tables (table) contain rows (tr) which contain cells (th or td).
+*/
 table tr th {
   background: #dddddd;
 }
 
+/*
+  Make the border of data cells (ie. normal cells) gray,
+  with a little space between the border and the contents, and
+  also make the font size small.
+*/
 table tr td {
   border: 1px solid #dddddd;
   padding: 0.5em;
