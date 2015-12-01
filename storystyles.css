@@ -286,3 +286,27 @@ table tr td {
   padding: 0.5em;
   font-size: small;
 }
+
+/*
+  Make the first column for the htmltags table be in a monospaced font.
+  Also, insert a "<" before and a ">" after the contents of the cell (not heading cells though).
+*/
+table.htmltags tr td:nth-child(1) {
+  font-family: monospace;
+  font-size: 12pt;
+}
+
+table.htmltags tr td:nth-child(1):before {
+  content: "<";
+}
+
+table.htmltags tr td:nth-child(1):after {
+  content: ">";
+}
+
+/*
+  Make the second column 20% of the table's width.
+*/
+table.htmltags tr td:nth-child(1) {
+  width: 20%;
+}

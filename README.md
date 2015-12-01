@@ -37,3 +37,4 @@ While viewing the files, you can download the files at that stage by clicking Do
 1. [Set Table Cell Borders](https://github.com/wizardofosmium/html_course/tree/54076975646ac90f335fc2931646a5c79439638d)
 1. [Set Table Cell Styles](https://github.com/wizardofosmium/html_course/tree/b90b52b0c7ff4ec34f2828130745b2c0bd263f7e)
 1. [CSS Information](https://github.com/wizardofosmium/html_course/tree/40934561b2088549f2e68d41cca589922a0c0e85)
+1. [Stylesheet Comments](https://github.com/wizardofosmium/html_course/tree/b7891c20f525d6545efe0353a55873e5fbcdda72)
