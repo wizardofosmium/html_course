@@ -74,7 +74,7 @@ p.abstract:before {
     - hovered:      black.
   This has the illusion that the border is added when hovered.
 */
-a {
+nav a {
   background: black;
   color: #f6e89d;
   padding: 0.5em;
@@ -89,7 +89,7 @@ a {
   
   :hover is anther pseudo-selector.
 */
-a:hover {
+nav a:hover {
   background: #f6e89d;
   color: black;
   border: 1px solid black;
