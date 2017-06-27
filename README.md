@@ -39,3 +39,4 @@ While viewing the files, you can download the files at that stage by clicking Do
 1. [CSS Information](https://github.com/wizardofosmium/html_course/tree/40934561b2088549f2e68d41cca589922a0c0e85)
 1. [Stylesheet Comments](https://github.com/wizardofosmium/html_course/tree/b7891c20f525d6545efe0353a55873e5fbcdda72)
 1. [Complete HTML Information](https://github.com/wizardofosmium/html_course/tree/6801ea416aa876816c46619ffce4af3758be08c5)
+1. [Complete CSS Information](https://github.com/wizardofosmium/html_course/tree/b088a11dbeafe641fcea74b1d94ff7691bcc4301)
