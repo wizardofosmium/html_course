@@ -5,6 +5,8 @@ Each of the stages are listed below.
 Click on a stage to see the files at that stage.
 While viewing the files, you can download the files at that stage by clicking Download ZIP on the right.
 
+[View the final pages](https://wizardofosmium.github.io/html_course/home.html)
+
 ## Stages
 
 1. [Start](https://github.com/wizardofosmium/html_course/tree/41ee73b584607515e8ba0ea9e112217f64b292af)
